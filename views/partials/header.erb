@@ -1,0 +1,42 @@
+<% if session[:user_id] %>
+<div class='ui top fixed blue inverted menu'>
+    <a href="/feed" class="item">
+    Home
+    </a>
+    <a href="/feed" class="item">
+    Feed
+    </a>
+    <a href="/post" class="item">
+    Post
+    </a>
+    <div class='ui two column centered grid'>
+        <div class='column'>
+          <h1>Viewcation</h1>
+        </div>
+      </div>
+    <div class='right menu'>
+      <a href="/account" class="ui item">
+      Account
+      </a>
+      <a href="/logout" class="ui item">
+      Logout
+      </a>
+    </div>
+  </div>
+    <% else %>
+    <div class='ui secondary pointing menu'>
+      <a href="/login" class="item">
+      Login
+      </a>
+      <div class='ui two column centered grid'>
+        <div class='column'>
+          <h1>Viewcation</h1>
+        </div>
+      </div>
+      <div class='right menu'>
+        <a href="/signup" class="item">
+        Sign Up
+        </a>
+      </div>
+    </div>
+    <% end %>

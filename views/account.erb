@@ -1,0 +1,19 @@
+<div class="ui segment">
+  <h1 class="ui center aligned header">
+   Account
+  </h1>
+</div>
+<h1 class="ui header">User</h1>
+<%= @user.firstName %> <%= @user.lastName %>
+<br>
+<h1 class="ui header">Email</h1>
+<%= @user.email %>
+<br>
+<h1 class="ui header">Profile Picture</h1>
+<img src="<%= @user.pic %>" width="150px" height='150px'>
+<br>
+<br>
+<br>
+<a href="/account/delete/<%= @user.id %>" class="negative ui button">
+  Delete Account
+</a>

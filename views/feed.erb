@@ -1,0 +1,35 @@
+<div class="ui feed">
+  <% for items in Post.all.reverse do %>
+    <div class="event">
+      <div class="label">
+        <img src="<%= items.user.pic %>">
+      </div>
+      <div class="content">
+        <div class="summary">
+          <a class="user">
+            <%= items.user.firstName %> <%= items.user.lastName %>
+          </a>
+          <div class="date">
+            <%= Time.now %>
+          </div>
+          <div class="extra images">
+            <img src='<%= items.image %>'>
+          </div>
+          </div>
+          <div class="extra text">
+          <%= items.text %>
+        </div>
+        <div class="meta">
+          <a class="like">
+          <i class="like icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <% if (session[:user_id]) == (items.user.id) %>
+      <a href='/post/delete/<%= items.id %>' class="negative  mini ui button">
+        Delete
+      </a>
+    <% end %>
+  <% end %>
+</div>
