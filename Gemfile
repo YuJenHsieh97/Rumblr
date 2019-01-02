@@ -8,13 +8,13 @@ gem 'rack'
 gem 'logger'
 gem 'pry'
 
+group :production do 
+    gem 'pg'
+end 
 group :developement do 
     gem 'sqlite3'
 end
 
-group :production do 
-    gem 'pg'
-end 
 
 
 
